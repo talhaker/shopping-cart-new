@@ -40,10 +40,16 @@
     <div class="page-header">
         <h1>SHOPPING CART</h1>
     </div>
+    <!-- This is the list handlebar template -->
+    <!-- Data will be inserted in its according place, replacing the brackets -->
+    <script id="list-item-template" type="text/x-handlebars-template">
+        <p>{{name}} ({{count}}) - ${{price}}</p>
+    </script>
 
     <div class="container">
         <div class="shopping-cart">
             <p class="cart-title">Items in Cart</p>
+            <!-- The new content will be displayed in cart-list -->
             <div class="cart-list"></div>
             <p>Total: $<span class="total">0</span></p>
             <button type="button" class="btn clear-cart">Clear Cart</button>
@@ -53,12 +59,15 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" data-name="glass" data-price="68">
+                    <div class="card-item" data-name="glass" data-price="68">
                         <div class="pricebox">
                             <p class="price"> $68 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/31AOX24ATKL.jpg" class="proimage">
@@ -69,12 +78,15 @@
 
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" item data-name="pencils" data-price="3">
+                    <div class="card-item" item data-name="pencils" data-price="3">
                         <div class="pricebox">
                             <p class="price"> $3 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/51YFEe%2BCYbL.jpg" class="proimage">
@@ -85,12 +97,15 @@
 
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" item data-name="kinfolk" data-price="21">
+                    <div class="card-item" item data-name="kinfolk" data-price="21">
                         <div class="pricebox">
                             <p class="price"> $21 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/41m0VhULItL.jpg" class="proimage">
@@ -104,12 +119,15 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" item data-name="book" data-price="25">
+                    <div class="card-item" item data-name="book" data-price="25">
                         <div class="pricebox">
                             <p class="price"> $25 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/41uyfSEwr0L.jpg" class="proimage">
@@ -120,12 +138,15 @@
 
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" item data-name="pipe" data-price="124">
+                    <div class="card-item" item data-name="pipe" data-price="124">
                         <div class="pricebox">
                             <p class="price"> $124 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/41TvbxcZpZL.jpg" class="proimage">
@@ -136,12 +157,15 @@
 
             <div class="col-md-4">
                 <div class="card-container">
-                    <div class="card item" item data-name="stool" data-price="92">
+                    <div class="card-item" item data-name="stool" data-price="92">
                         <div class="pricebox">
                             <p class="price"> $92 </p>
                         </div>
                         <div class="buybox">
                             <p class="add-to-cart"> ADD TO CART </p>
+                        </div>
+                        <div class="delbox">
+                            <p class="remove-from-cart"> REMOVE FROM CART </p>
                         </div>
                         <div class="card-inner">
                             <img src="http://ecx.images-amazon.com/images/I/41NZO5GovmL.jpg" class="proimage">
@@ -151,10 +175,9 @@
             </div>
         </div>
     </div>
-    <!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </body>
 
