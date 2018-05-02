@@ -1,0 +1,13 @@
+body {
+    background-color: #EAEBE7;
+}
+
+.card-container {
+    height: 420px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 2px 2px 2px #B3B3B3;
+    margin: 20px;
+}
